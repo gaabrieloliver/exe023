@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabela grande</title>
+    <style>
+
+        #loom-companion-mv3 {
+        display: none;
+        }
+        
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        padding: 15vw;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      table {
+        /* cabeçalho fixo */
+        position: relative;
+
+        background-color: rgba(211, 211, 211, 0.438);
+        width: 50vw;
+        text-align: center;
+
+        border-collapse: collapse;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356),
+          -2px -2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        background-color: lightgrey;
+        color: rgb(107, 0, 0);
+
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+      }
+
+      thead,
+      tfoot {
+        background-color: rgb(31, 31, 31);
+        color: white;
+      }
+
+      /* cabeçalho fixo */
+      thead > tr > th {
+        position: sticky;
+        top: -1px;
+        background-color: rgb(31, 31, 31);
+      }
+
+      tbody > tr:nth-child(2n) {
+        background-color: lightgrey;
+      }
+
+      section {
+        padding: 5vw;
+        padding-top: 3vh;
+
+        width: 60vw;
+        background-color: rgb(223, 223, 223);
+        margin-top: 10vh;
+        border-radius: 15px;
+
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356),
+          -2px -2px 5px rgba(0, 0, 0, 0.1);
+
+      }
+
+      h2 {
+        margin-bottom: 0.2rem;
+        color: rgb(107, 0, 0);
+      }
+
+      li {
+        margin-bottom: 1rem;
+      }
+
+      li > span {
+        font-weight: bold;
+        color: rgb(107, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Uso de tabelas grandes</h1>
+    <!-- 
+        ANATOMIA PARA TABELAS GRANDES
+        TABLE
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+     -->
+    <table>
+      <caption>
+        População das unidades federativas
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col" style="width: 50px">Bandeira</th>
+          <th scope="col">Estado</th>
+          <th scope="col">População</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bandeira_do_estado_de_S%C3%A3o_Paulo.svg/45px-Bandeira_do_estado_de_S%C3%A3o_Paulo.svg.png"
+              alt="bandeira de são paulo"
+            />
+          </td>
+          <td>São Paulo</td>
+          <td class="num">44 411 238</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Bandeira_de_Minas_Gerais.svg/45px-Bandeira_de_Minas_Gerais.svg.png"
+              alt="Bandeira Minas Gerais"
+            />
+          </td>
+          <td>Minas Gerais</td>
+          <td class="num">20 539 989</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg/45px-Bandeira_do_estado_do_Rio_de_Janeiro.svg.png"
+            />
+          </td>
+          <td>Rio de Janeiro</td>
+          <td class="num">16 055 174</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bandeira_da_Bahia.svg/45px-Bandeira_da_Bahia.svg.png"
+              alt="bandeira da Bahia"
+            />
+          </td>
+          <td>Bahia</td>
+          <td class="num">14 141 626</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Bandeira_de_Pernambuco.svg/45px-Bandeira_de_Pernambuco.svg.png"
+              alt=""
+            />
+          </td>
+          <td>Pernambuco</td>
+          <td class="num">9 058 931</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bandeira_da_Para%C3%ADba.svg/45px-Bandeira_da_Para%C3%ADba.svg.png"
+            />
+          </td>
+          <td>Paraíba</td>
+          <td class="num">3 974 687</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bandeira_do_estado_de_S%C3%A3o_Paulo.svg/45px-Bandeira_do_estado_de_S%C3%A3o_Paulo.svg.png"
+              alt="bandeira de são paulo"
+            />
+          </td>
+          <td>São Paulo</td>
+          <td class="num">44 411 238</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Bandeira_de_Minas_Gerais.svg/45px-Bandeira_de_Minas_Gerais.svg.png"
+              alt="Bandeira Minas Gerais"
+            />
+          </td>
+          <td>Minas Gerais</td>
+          <td class="num">20 539 989</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg/45px-Bandeira_do_estado_do_Rio_de_Janeiro.svg.png"
+            />
+          </td>
+          <td>Rio de Janeiro</td>
+          <td class="num">16 055 174</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bandeira_da_Bahia.svg/45px-Bandeira_da_Bahia.svg.png"
+              alt="bandeira da Bahia"
+            />
+          </td>
+          <td>Bahia</td>
+          <td class="num">14 141 626</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Bandeira_de_Pernambuco.svg/45px-Bandeira_de_Pernambuco.svg.png"
+              alt=""
+            />
+          </td>
+          <td>Pernambuco</td>
+          <td class="num">9 058 931</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bandeira_da_Para%C3%ADba.svg/45px-Bandeira_da_Para%C3%ADba.svg.png"
+            />
+          </td>
+          <td>Paraíba</td>
+          <td class="num">3 974 687</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bandeira_do_estado_de_S%C3%A3o_Paulo.svg/45px-Bandeira_do_estado_de_S%C3%A3o_Paulo.svg.png"
+              alt="bandeira de são paulo"
+            />
+          </td>
+          <td>São Paulo</td>
+          <td class="num">44 411 238</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Bandeira_de_Minas_Gerais.svg/45px-Bandeira_de_Minas_Gerais.svg.png"
+              alt="Bandeira Minas Gerais"
+            />
+          </td>
+          <td>Minas Gerais</td>
+          <td class="num">20 539 989</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg/45px-Bandeira_do_estado_do_Rio_de_Janeiro.svg.png"
+            />
+          </td>
+          <td>Rio de Janeiro</td>
+          <td class="num">16 055 174</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bandeira_da_Bahia.svg/45px-Bandeira_da_Bahia.svg.png"
+              alt="bandeira da Bahia"
+            />
+          </td>
+          <td>Bahia</td>
+          <td class="num">14 141 626</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Bandeira_de_Pernambuco.svg/45px-Bandeira_de_Pernambuco.svg.png"
+              alt=""
+            />
+          </td>
+          <td>Pernambuco</td>
+          <td class="num">9 058 931</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bandeira_da_Para%C3%ADba.svg/45px-Bandeira_da_Para%C3%ADba.svg.png"
+            />
+          </td>
+          <td>Paraíba</td>
+          <td class="num">3 974 687</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bandeira_do_estado_de_S%C3%A3o_Paulo.svg/45px-Bandeira_do_estado_de_S%C3%A3o_Paulo.svg.png"
+              alt="bandeira de são paulo"
+            />
+          </td>
+          <td>São Paulo</td>
+          <td class="num">44 411 238</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Bandeira_de_Minas_Gerais.svg/45px-Bandeira_de_Minas_Gerais.svg.png"
+              alt="Bandeira Minas Gerais"
+            />
+          </td>
+          <td>Minas Gerais</td>
+          <td class="num">20 539 989</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg/45px-Bandeira_do_estado_do_Rio_de_Janeiro.svg.png"
+            />
+          </td>
+          <td>Rio de Janeiro</td>
+          <td class="num">16 055 174</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bandeira_da_Bahia.svg/45px-Bandeira_da_Bahia.svg.png"
+              alt="bandeira da Bahia"
+            />
+          </td>
+          <td>Bahia</td>
+          <td class="num">14 141 626</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Bandeira_de_Pernambuco.svg/45px-Bandeira_de_Pernambuco.svg.png"
+              alt=""
+            />
+          </td>
+          <td>Pernambuco</td>
+          <td class="num">9 058 931</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bandeira_da_Para%C3%ADba.svg/45px-Bandeira_da_Para%C3%ADba.svg.png"
+            />
+          </td>
+          <td>Paraíba</td>
+          <td class="num">3 974 687</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="2" scope="row">Total de Habitantes</th>
+          <td>108.181.645</td>
+        </tr>
+      </tfoot>
+    </table>
+    <section>
+        <h2>A Importância de Conhecer os Dados da População das Unidades Federativas</h2>
+        <p>
+          Conhecer os dados da população das unidades federativas é crucial para uma ampla gama de análises e decisões políticas, econômicas e sociais. Esses dados fornecem uma base sólida para entender a distribuição da população, planejar recursos e desenvolver políticas públicas eficazes. <br> Aqui estão algumas razões pelas quais esses dados são essenciais:
+          <ol>
+            <li><span>Planejamento e Gestão de Recursos:</span> Os dados populacionais ajudam a alocar recursos de maneira mais eficiente. Estados e municípios podem usar essas informações para planejar a construção de infraestrutura, como escolas, hospitais e redes de transporte, de acordo com a demanda real.</li>
+            <li><span>Desenvolvimento Econômico:</span> O conhecimento da população ajuda a identificar áreas de potencial crescimento econômico e a ajustar estratégias de desenvolvimento regional. Empresas e investidores também utilizam essas informações para decidir onde estabelecer novas operações e quais mercados explorar.</li>
+            <li><span>Políticas Públicas:</span> As autoridades podem criar políticas públicas direcionadas às necessidades específicas da população. Por exemplo, uma região com uma alta concentração de idosos pode precisar de serviços de saúde e assistência social específicos.</li>
+            <li><span>Distribuição de Fundos Federais:</span> A distribuição de fundos federais para estados e municípios muitas vezes se baseia na população. Conhecer os dados populacionais é essencial para garantir que os recursos sejam distribuídos de forma justa e eficaz.</li>
+            <li><span>Planejamento Urbano e Rural:</span> Dados populacionais são fundamentais para o planejamento urbano e rural. Eles ajudam a prever tendências de crescimento e a planejar a expansão das cidades e áreas rurais de maneira ordenada e sustentável.</li>
+            <li><span>Resposta a Emergências:</span> Em situações de emergência, como desastres naturais ou crises de saúde, os dados populacionais são essenciais para coordenar a resposta e garantir que a ajuda chegue às áreas mais afetadas de forma rápida e eficaz.</li>
+            <li><span>Educação e Pesquisa:</span> Pesquisadores e acadêmicos utilizam dados populacionais para estudos sobre demografia, saúde pública, economia e muito mais. Esses dados são fundamentais para entender as tendências e padrões que afetam a sociedade.</li>
+          </ol>
+          <p>Em resumo, conhecer os dados da população das unidades federativas é vital para a tomada de decisões informadas e a formulação de estratégias que promovam o bem-estar e o desenvolvimento equitativo em todas as regiões. Esses dados não apenas ajudam a melhorar a qualidade de vida das pessoas, mas também a construir uma sociedade mais justa e eficiente.</p>
+        </p>
+    </section>
+    <p>Fonte: <a href="https://pt.wikipedia.org/wiki/Unidades_federativas_do_Brasil#:~:text=%5B30%5D-,Lista%20sint%C3%A9tica,-De%20todos%20os"> Wikipedia</a></p>
+  </body>
+</html>
