@@ -5,20 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 03</title>
     <style>
+        * {
+            margin: 0;
+        }
+        
+        h1 {
+            margin-bottom: 1em;
+        }
         body {
             font-family: Arial, Helvetica, sans-serif;
+            
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
+
+            
 
         table {
             border: 1px solid black;
             border-collapse: collapse;
-            width: 500px;
+            width: 700px;
         }
 
         th, td {
-           border: 1px solid;
+           border: 1px solid black;
            padding: 15px; 
         }
+
+        thead > tr, .pintado {
+            background-color: rgb(73, 73, 73);
+            color: white; 
+        }
+
     </style>
 </head>
 <body>
@@ -62,7 +83,7 @@
                 <td>0.0</td>
                 <td>0.0</td>
             </tr>
-            <tr>
+            <tr class="pintado">
                 <th colspan="4">Média de Exatas</th>
                 <td>0.0</td>
             </tr>
@@ -79,7 +100,7 @@
                 <td>0.0</td>
                 <td>0.0</td>
             </tr>
-            <tr>
+            <tr class="pintado">
                 <th colspan="4">Média de Humanas</th>
                 <td>0.0</td>
             </tr>
